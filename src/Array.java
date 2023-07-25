@@ -1,7 +1,7 @@
 import java.util.Arrays;
 
 public class Array {
-    int size;
+    private int size;
 
 
     int count;
