@@ -140,4 +140,17 @@ public class Matrix {
             index++;
         }
     }
+
+    public void initRandOfKino() {
+        for (int i = 0; i < this.row; i++){
+            for (int j = 0; j < this.cols; j++){
+                arr[i][(int) (Math.random() * (this.cols))] = (int) (Math.random() + 1);
+            }
+        }
+    }
+
+    public void freePlaces(Matrix obj, int value) {
+        int cnt = 0;
+
+    }
 }

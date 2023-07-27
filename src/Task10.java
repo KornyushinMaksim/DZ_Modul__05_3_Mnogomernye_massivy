@@ -7,8 +7,18 @@
 //        Число занятых мест и какие места заняты на момент запроса
 //        определите случайным образом. Вывести исходный массив на экран.
 
+import java.util.Scanner;
+
 public class Task10 {
     public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Введите количество рядов и число мест в ряду");
+        int n = in.nextInt();       //ряды
+        int m = in.nextInt();       //число мест в ряде
+        Matrix mtrx = new Matrix(n, m);
 
+        mtrx.initRandOfKino();
+        System.out.println("\n1 - билет уже куплен\t0 - место свободно\n");
+        System.out.println(mtrx.show());
     }
 }
