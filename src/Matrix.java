@@ -9,6 +9,15 @@ public class Matrix {
         this.arr = new int[this.row][this.cols];
     }
 
+    public void init() {
+        int cnt = 1;
+        for (int i = 0; i < this.row; i++) {
+            for (int j = 0; j < this.cols; j++) {
+                this.arr[i][j] = cnt++;
+            }
+        }
+    }
+
     public void initRand(int value) {
         for (int i = 0; i < this.arr.length; i++) {
             for (int j = 0; j < this.arr[i].length; j++) {
@@ -44,9 +53,8 @@ public class Matrix {
     }
 
     public String tsk6() {
-        int max = 0;
-        int ave = 0;
-        int min = 0;
+        int max = this.arr[0][0];
+        int min = this.arr[0][0];
         String strMax = new String("max:\n");
         String strMin = new String("min:\n");
 
@@ -71,5 +79,65 @@ public class Matrix {
             }
         }
         return strMax + strMin;
+    }
+
+    public void initSnake() {
+        int cnt = 1;
+        for (int i = 0; i < this.row; i++) {
+            if (i % 2 == 0) {
+                for (int j = 0; j < cols; j++) {
+                    this.arr[i][j] = cnt++;
+                }
+            } else if (i % 2 != 0) {
+                for (int j = this.cols - 1; j >= 0; j--) {
+                    this.arr[i][j] = cnt++;
+                }
+            }
+        }
+    }
+
+    public void initSnail() {
+        int cnt = 1;
+        int rowUp = 0;
+        int rowDown = this.row - 1;
+        int colsLeft = 0;
+        int colsRight = this.cols - 1;
+
+        while (cnt <= this.row * this.cols) {
+            for (int i = rowUp; i <= colsRight; i++) {
+                this.arr[rowUp][i] = cnt++;
+            }
+            rowUp++;
+            for (int i = rowUp; i <= rowDown; i++) {
+                this.arr[i][colsRight] = cnt++;
+            }
+            colsRight--;
+            for (int i = colsRight; i >= colsLeft; i--) {
+                this.arr[rowDown][i] = cnt++;
+            }
+            rowDown--;
+            for (int i = rowDown; i >= rowUp; i--) {
+                this.arr[i][colsLeft] = cnt++;
+            }
+            colsLeft++;
+        }
+    }
+
+    public void initDiagonal() {
+        int cnt = 1;
+        int digitOfDiagonal = this.row - 1;
+        int index = 0;
+
+        while (cnt <= this.row * this.cols) {
+            for (int i = 0; i < this.row; i++) {
+                for (int j = 0; j < this.cols; j++) {
+                    if (i + j == this.cols - 1 - digitOfDiagonal) {
+                        this.arr[i][j] = cnt++;
+                    }
+                }
+            }
+            digitOfDiagonal--;
+            index++;
+        }
     }
 }
