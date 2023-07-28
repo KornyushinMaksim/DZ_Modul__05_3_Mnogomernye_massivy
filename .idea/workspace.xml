@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7494dabe-0eea-41c0-aa41-1ac61dc112d6" name="Changes" comment="homeWork_27_07">
+    <list default="true" id="7494dabe-0eea-41c0-aa41-1ac61dc112d6" name="Changes" comment="homeWork_28_07">
+      <change afterPath="$PROJECT_DIR$/src/Task11.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Matrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Matrix.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Task10.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Task10.java" afterDir="false" />
@@ -105,7 +106,14 @@
       <option name="project" value="LOCAL" />
       <updated>1690492656658</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="homeWork_28_07">
+      <created>1690494424929</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1690494424929</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -113,7 +121,8 @@
     <MESSAGE value="homeWork_22_07" />
     <MESSAGE value="homeWork_25_07" />
     <MESSAGE value="homeWork_27_07" />
-    <option name="LAST_COMMIT_MESSAGE" value="homeWork_27_07" />
+    <MESSAGE value="homeWork_28_07" />
+    <option name="LAST_COMMIT_MESSAGE" value="homeWork_28_07" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -125,7 +134,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Matrix.java</url>
-          <line>105</line>
+          <line>107</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>

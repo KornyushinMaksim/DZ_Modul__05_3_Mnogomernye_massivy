@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Matrix {
     private int row;
     private int cols;
@@ -144,13 +146,34 @@ public class Matrix {
     public void initRandOfKino() {
         for (int i = 0; i < this.row; i++){
             for (int j = 0; j < this.cols; j++){
-                arr[i][(int) (Math.random() * (this.cols))] = (int) (Math.random() + 1);
+                arr[i][j] = (int) (Math.random() + 0.5);
             }
         }
     }
 
-    public void freePlaces(Matrix obj, int value) {
+    public String freePlaces(int value) {
         int cnt = 0;
+        String strRes = new String();
+        String strTemp = new String();
 
+        for (int i = 0; i < this.row; i++) {
+            cnt = 0;
+            strRes += "ряд: " + i;
+            strTemp ="\tместа: ";
+            for (int j = 0; j < this.cols; j++){
+                if (this.arr[i][j] == 0){
+                    strTemp += j + ", ";
+                    cnt++;
+                } else {
+                    if (cnt >= value) {
+                        strRes += strTemp + "\t";
+                    }
+                    strTemp ="\tместа: ";
+                    cnt = 0;
+                }
+            }
+            strRes += "\n";
+        }
+        return strRes;
     }
 }

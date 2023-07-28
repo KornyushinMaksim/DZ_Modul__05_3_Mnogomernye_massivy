@@ -20,5 +20,10 @@ public class Task10 {
         mtrx.initRandOfKino();
         System.out.println("\n1 - билет уже куплен\t0 - место свободно\n");
         System.out.println(mtrx.show());
+
+        System.out.print("Введите количество соседних мест: ");
+        int k = in.nextInt();
+
+        System.out.println(mtrx.freePlaces(k));
     }
 }
